@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+
+type TTodo = {
+  id: string;
+  text: string;
+  completed: boolean;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState<string>("");
+  const [todos, setTodos] = useState<TTodo[]>([]);
+  const handleSetTodoClick = () => {
+    setTodos([
+      ...todos,
+      {
+        id: new Date().toISOString(),
+        text: text,
+        completed: false,
+      },
+    ]);
+    setText("");
+  };
+
+  const handleDeleteTodo = (todoId: string) => {
+    setTodos(
+      todos.filter((curTodo) => {
+        return curTodo.id !== todoId;
+      }),
+    );
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ul>
+        {todos.map((curTodo) => {
+          return (
+            <>
+              <button
+                onClick={() => {
+                  curTodo.completed = !curTodo.completed;
+                }}
+              >
+                ✅
+              </button>
+              <li key={curTodo.id}>{curTodo.text}</li>
+              <button onClick={() => handleDeleteTodo(curTodo.id)}>X</button>
+            </>
+          );
+        })}
+      </ul>
+      <label htmlFor="text-title">TODO name </label>
+      <input
+        value={text}
+        type="text"
+        id="text-title"
+        onChange={(e) => setText(e.target.value)}
+      />
+      <button onClick={() => handleSetTodoClick()}>Add Todo</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
