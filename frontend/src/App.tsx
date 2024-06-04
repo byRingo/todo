@@ -1,15 +1,16 @@
 import { useState } from "react";
+import TodoList from "./components/TodoList/TodoList.tsx";
 
-type TTodo = {
+export type TTodo = {
   id: string;
   text: string;
   completed: boolean;
 };
 
-function App() {
+export default function App() {
   const [text, setText] = useState<string>("");
   const [todos, setTodos] = useState<TTodo[]>([]);
-  const handleSetTodoClick = () => {
+  const handleAddTodo = () => {
     setTodos([
       ...todos,
       {
@@ -19,6 +20,20 @@ function App() {
       },
     ]);
     setText("");
+  };
+
+  const toggleTodoComplete = (todoId: string) => {
+    setTodos(
+      todos.map((curTodo) => {
+        if (curTodo.id !== todoId) {
+          return curTodo;
+        }
+        return {
+          ...curTodo,
+          completed: !curTodo.completed,
+        };
+      }),
+    );
   };
 
   const handleDeleteTodo = (todoId: string) => {
@@ -31,23 +46,11 @@ function App() {
 
   return (
     <>
-      <ul>
-        {todos.map((curTodo) => {
-          return (
-            <>
-              <button
-                onClick={() => {
-                  curTodo.completed = !curTodo.completed;
-                }}
-              >
-                ✅
-              </button>
-              <li key={curTodo.id}>{curTodo.text}</li>
-              <button onClick={() => handleDeleteTodo(curTodo.id)}>X</button>
-            </>
-          );
-        })}
-      </ul>
+      <TodoList
+        todos={todos}
+        handleDeleteTodo={handleDeleteTodo}
+        toggleTodoComplete={toggleTodoComplete}
+      />
       <label htmlFor="text-title">TODO name </label>
       <input
         value={text}
@@ -55,8 +58,7 @@ function App() {
         id="text-title"
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={() => handleSetTodoClick()}>Add Todo</button>
+      <button onClick={() => handleAddTodo()}>Add Todo</button>
     </>
   );
-
-export default App;
+}
