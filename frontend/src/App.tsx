@@ -58,6 +58,5 @@ function App() {
       <button onClick={() => handleSetTodoClick()}>Add Todo</button>
     </>
   );
-}
 
 export default App;
