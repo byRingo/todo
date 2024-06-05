@@ -1,26 +1,36 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+type TTodo = {
+  id: string;
+  text: string;
+  completed: boolean;
+};
+
+type TodosState = {
+  todos: TTodo[];
+};
+
+const initialState: TodosState = {
+  todos: [],
+};
 
 const todoSlice = createSlice({
   name: "todos",
-  initialState: {
-    todos: [],
-  },
+  initialState: initialState,
   reducers: {
-    addTodo(state, action) {
-      if (Array.isArray(state.todos)) {
-        state.todos.push({
-          id: new Date().toISOString(),
-          text: action.payload.text,
-          completed: false,
-        });
-      }
+    addTodo(state, action: PayloadAction<{ text: string }>) {
+      state.todos.push({
+        id: new Date().toISOString(),
+        text: action.payload.text,
+        completed: false,
+      });
     },
-    removeTodo(state, action) {
+    removeTodo(state, action: PayloadAction<{ id: string }>) {
       state.todos = state.todos.filter((curTodo) => {
         return curTodo.id !== action.payload.id;
       });
     },
-    toggleTodoComplete(state, action) {
+    toggleTodoComplete(state, action: PayloadAction<{ id: string }>) {
       const toggledTodo = state.todos.find(
         (todo) => todo.id === action.payload.id,
       );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TodoList from "./components/TodoList/TodoList.tsx";
-import { useDispatch } from "react-redux";
 import { addTodo } from "./store/todoSlice.ts";
+import { useAppDispatch } from "./hook.ts";
 
 export type TTodo = {
   id: string;
@@ -11,7 +11,7 @@ export type TTodo = {
 
 export default function App() {
   const [text, setText] = useState<string>("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const addTask = () => {
     dispatch(addTodo({ text }));
     setText("");
