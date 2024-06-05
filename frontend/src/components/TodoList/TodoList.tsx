@@ -1,8 +1,8 @@
 import TodoItem from "../TodoItem/TodoItem.tsx";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../hook.ts";
 
 export default function TodoList() {
-  const todos = useSelector((state) => state.todos.todos);
+  const todos = useAppSelector((state) => state.todos.todos);
   return (
     <ul>
       {todos.map((curTodo) => {

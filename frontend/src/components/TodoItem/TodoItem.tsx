@@ -1,13 +1,13 @@
 import { TTodo } from "../../App.tsx";
-import { useDispatch } from "react-redux";
 import { removeTodo, toggleTodoComplete } from "../../store/todoSlice.ts";
+import { useAppDispatch } from "../../hook.ts";
 
 interface TodoItemProps {
   curTodo: TTodo;
 }
 
 export default function TodoItem({ curTodo }: TodoItemProps) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const deleteTodo = (id: string) => {
     dispatch(removeTodo({ id }));
   };
