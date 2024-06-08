@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoList from "./components/TodoList/TodoList.tsx";
-import { addTodo } from "./store/todoSlice.ts";
+import TodoForm from "./components/TodoForm/TodoForm.tsx";
 import { useAppDispatch } from "./hook.ts";
+import { fillTodos } from "./store/todoSlice.ts";
+import styled from "styled-components";
 
 export type TTodo = {
   id: string;
@@ -9,25 +11,33 @@ export type TTodo = {
   completed: boolean;
 };
 
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+`;
+
 export default function App() {
   const [text, setText] = useState<string>("");
   const dispatch = useAppDispatch();
-  const addTask = () => {
-    dispatch(addTodo({ text }));
-    setText("");
-  };
+
+  useEffect(() => {
+    const localStorageItem = localStorage.getItem("todos");
+    let allTodos;
+    if (localStorageItem) {
+      allTodos = JSON.parse(localStorageItem);
+      allTodos.map((cur: TTodo) => {
+        dispatch(fillTodos({ id: cur.id, text: cur.text }));
+      });
+    }
+  }, []);
 
   return (
-    <>
+    <Body>
       <TodoList />
-      <label htmlFor="text-title">TODO name </label>
-      <input
-        value={text}
-        type="text"
-        id="text-title"
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button onClick={() => addTask()}>Add Todo</button>
-    </>
+      <TodoForm text={text} setText={setText} />
+    </Body>
   );
 }
