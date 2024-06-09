@@ -3,5 +3,5 @@
 ### Stack:
 #### React, TypeScript, Redux, styled-components, Vite
 
-![img.png](img.png)
+![img.png](frontend/img.png)
 
