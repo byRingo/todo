@@ -1,5 +1,9 @@
 import { TTodo } from "../../pages/App/App.tsx";
-import { removeTodo, toggleTodoComplete } from "../../store/todoSlice.ts";
+import {
+  editTodoText,
+  removeTodo,
+  toggleTodoComplete,
+} from "../../store/todoSlice.ts";
 import { useAppDispatch } from "../../hook.ts";
 import {
   Checkmark,
@@ -9,6 +13,7 @@ import {
   Li,
 } from "./TodoItem.ts";
 import store from "../../store";
+import React from "react";
 
 interface TodoItemProps {
   curTodo: TTodo;
@@ -19,16 +24,23 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
 
   const deleteTodo = (id: string) => {
     dispatch(removeTodo({ id }));
+    localStorageUpdate();
+  };
+
+  const localStorageUpdate = () => {
     const stores = store.getState();
     localStorage.clear();
     localStorage.setItem("todos", JSON.stringify(stores.todos.todos));
   };
 
+  const editTodo = (id: string, e: React.ChangeEvent) => {
+    dispatch(editTodoText({ id: id, text: e.target.innerHTML }));
+    localStorageUpdate();
+  };
+
   const toggleComplete = (id: string) => {
     dispatch(toggleTodoComplete({ id }));
-    const stores = store.getState();
-    localStorage.clear();
-    localStorage.setItem("todos", JSON.stringify(stores.todos.todos));
+    localStorageUpdate();
   };
   return (
     <Item>
@@ -39,8 +51,12 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
         {" "}
         <Checkmark>L</Checkmark>
       </CompleteButton>
-
-      <Li $isCompleted={curTodo.isCompleted} key={curTodo.id}>
+      <Li
+        $isCompleted={curTodo.isCompleted}
+        key={curTodo.id}
+        contentEditable={true}
+        onBlur={(e) => editTodo(curTodo.id, e)}
+      >
         {curTodo.text}
       </Li>
       <DeleteButton onClick={() => deleteTodo(curTodo.id)}>X</DeleteButton>
