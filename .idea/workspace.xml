@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e695c645-e145-4e2b-925c-3cf67e665283" name="Changes" comment="commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Victor Voronov &lt;113057834+byringo@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="05.06" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;byRingo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b7b59a56-e896-464e-81e5-27a2c0dcf549" />
+        <option name="url" value="https://github.com/byRingo/todo.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2h3qVJrU6mtINg63hTLvq3MPE2L" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Victor/WebstormProjects/flashcards",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Victor\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.6\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Victor\WebstormProjects\todo\frontend\src\pages\App" />
+      <recent name="C:\Users\Victor\WebstormProjects\todo\frontend\src\pages" />
+      <recent name="C:\Users\Victor\WebstormProjects\todo\backend\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e695c645-e145-4e2b-925c-3cf67e665283" name="Changes" comment="" />
+      <created>1716833131052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716833131052</updated>
+      <workItem from="1716833132115" duration="1122000" />
+      <workItem from="1716998148765" duration="18000" />
+      <workItem from="1717337353045" duration="3431000" />
+      <workItem from="1717341536790" duration="2225000" />
+      <workItem from="1717515715232" duration="2929000" />
+      <workItem from="1717523829804" duration="3444000" />
+      <workItem from="1717599940354" duration="4371000" />
+      <workItem from="1717680496133" duration="24000" />
+      <workItem from="1717852791550" duration="12734000" />
+      <workItem from="1717919575990" duration="9953000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717339785694</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717339785694</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717339873355</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717339873355</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717340788020</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717340788020</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717340832474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717340832474</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1717340872676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717340872676</updated>
+    </task>
+    <task id="LOCAL-00006" summary="delete extra files">
+      <option name="closed" value="true" />
+      <created>1717341153670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717341153670</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mongodb init + .env file with sample">
+      <option name="closed" value="true" />
+      <created>1717345930994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717345930994</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mongodb init + .env file with sample">
+      <option name="closed" value="true" />
+      <created>1717345994120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717345994120</updated>
+    </task>
+    <task id="LOCAL-00009" summary="todo handling without redux, styles and components separation">
+      <option name="closed" value="true" />
+      <created>1717518608454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717518608455</updated>
+    </task>
+    <task id="LOCAL-00010" summary="50% redux realization">
+      <option name="closed" value="true" />
+      <created>1717527177795</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717527177795</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/04.06' into 04.06&#10;&#10;# Conflicts:&#10;#&#9;frontend/src/App.tsx">
+      <option name="closed" value="true" />
+      <created>1717527219148</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717527219148</updated>
+    </task>
+    <task id="LOCAL-00012" summary="todo list with redux &#10;# Conflicts:&#10;#&#9;frontend/src/App.tsx">
+      <option name="closed" value="true" />
+      <created>1717603667198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717603667198</updated>
+    </task>
+    <task id="LOCAL-00013" summary="redux with ts refactoring and own hooks realization for useDispatch and useSelector">
+      <option name="closed" value="true" />
+      <created>1717605044323</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717605044323</updated>
+    </task>
+    <task id="LOCAL-00014" summary="delete server directory, made some ui, data storage in local storage">
+      <option name="closed" value="true" />
+      <created>1717866362863</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717866362863</updated>
+    </task>
+    <task id="LOCAL-00015" summary="local storage realization and css refactoring">
+      <option name="closed" value="true" />
+      <created>1717926042733</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717926042733</updated>
+    </task>
+    <task id="LOCAL-00016" summary="react strict mode">
+      <option name="closed" value="true" />
+      <created>1717926145277</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717926145277</updated>
+    </task>
+    <task id="LOCAL-00017" summary="gh pages">
+      <option name="closed" value="true" />
+      <created>1717927487698</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717927487698</updated>
+    </task>
+    <task id="LOCAL-00018" summary="vite gh pages">
+      <option name="closed" value="true" />
+      <created>1717928480280</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717928480280</updated>
+    </task>
+    <task id="LOCAL-00019" summary="vite gh pages">
+      <option name="closed" value="true" />
+      <created>1717928498790</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717928498790</updated>
+    </task>
+    <task id="LOCAL-00020" summary="clear main repo">
+      <option name="closed" value="true" />
+      <created>1717928984571</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717928984571</updated>
+    </task>
+    <task id="LOCAL-00021" summary="commit">
+      <option name="closed" value="true" />
+      <created>1717929398982</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717929398982</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit">
+      <option name="closed" value="true" />
+      <created>1717929422878</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1717929422878</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="02.06" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="delete extra files" />
+    <MESSAGE value="mongodb init + .env file with sample" />
+    <MESSAGE value="todo handling without redux, styles and components separation" />
+    <MESSAGE value="50% redux realization" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/04.06' into 04.06&#10;&#10;# Conflicts:&#10;#&#9;frontend/src/App.tsx" />
+    <MESSAGE value="todo list with redux &#10;# Conflicts:&#10;#&#9;frontend/src/App.tsx" />
+    <MESSAGE value="redux with ts refactoring and own hooks realization for useDispatch and useSelector" />
+    <MESSAGE value="delete server directory, made some ui, data storage in local storage" />
+    <MESSAGE value="local storage realization and css refactoring" />
+    <MESSAGE value="react strict mode" />
+    <MESSAGE value="gh pages" />
+    <MESSAGE value="vite gh pages" />
+    <MESSAGE value="clear main repo" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>
