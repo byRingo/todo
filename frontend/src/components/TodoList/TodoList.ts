@@ -27,7 +27,10 @@ export const TodoCanvas = styled.div`
   border-radius: 3rem;
   background-color: #d0c4d9;
   width: 80%;
+  overflow-y: auto;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
+  scrollbar-color: #c9c7ed #f5f2ff;
+  scrollbar-width: thin;
 `;
