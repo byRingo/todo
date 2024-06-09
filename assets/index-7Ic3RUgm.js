@@ -104,9 +104,12 @@ Error generating stack: `+i.message+`
   border-radius: 3rem;
   background-color: #d0c4d9;
   width: 80%;
+  overflow-y: auto;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
+  scrollbar-color: #c9c7ed #f5f2ff;
+  scrollbar-width: thin;
 `;function Zv({children:e}){const t=np(n=>n.todos.todos);return G.jsxs(Xv,{children:[G.jsx(Gv,{children:"TO DO"})," ",G.jsx(Yv,{children:t.map(n=>G.jsx(Kv,{curTodo:n},n.id))}),e]})}const Jv=ve.form`
   display: flex;
   padding: 0.5rem;
