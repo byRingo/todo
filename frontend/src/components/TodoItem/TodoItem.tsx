@@ -9,11 +9,13 @@ import {
   Checkmark,
   CompleteButton,
   DeleteButton,
+  DeleteImg,
   Item,
   Li,
 } from "./TodoItem.ts";
 import store from "../../store";
 import React from "react";
+import bin from "../../assets/bin.png";
 
 interface TodoItemProps {
   curTodo: TTodo;
@@ -34,7 +36,6 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
   };
 
   const editTodo = (id: string, e: React.ChangeEvent<HTMLElement>) => {
-    console.log(e);
     dispatch(editTodoText({ id: id, text: e.target.innerText }));
     localStorageUpdate();
   };
@@ -44,6 +45,7 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
     dispatch(toggleTodoComplete({ id }));
     localStorageUpdate();
   };
+
   return (
     <Item>
       <CompleteButton
@@ -62,7 +64,9 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
       >
         {curTodo.text}
       </Li>
-      <DeleteButton onClick={() => deleteTodo(curTodo.id)}>X</DeleteButton>
+      <DeleteButton onClick={() => deleteTodo(curTodo.id)}>
+        <DeleteImg src={bin} alt="X" />
+      </DeleteButton>
     </Item>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { addTodo } from "../../store/todoSlice.ts";
 import { useAppDispatch, useAppSelector } from "../../hook.ts";
-import { Button, Form, Input, Label } from "./TodoForm.ts";
+import { AddImg, Button, Form, Input } from "./TodoForm.ts";
+import plus from "../../assets/plus.png";
 
 interface TodoFormProps {
   text: string;
@@ -27,14 +28,16 @@ export default function TodoForm({ text, setText }: TodoFormProps) {
 
   return (
     <Form onSubmit={onFormSubmit}>
-      <Label htmlFor="text-title">Название задачи</Label>
+      <Button onClick={() => addTask()}>
+        <AddImg src={plus} alt="" />
+      </Button>
       <Input
         value={text}
         type="text"
         id="text-title"
+        placeholder="Добавить задачу"
         onChange={(e) => setText(e.target.value)}
       />
-      <Button onClick={() => addTask()}>Добавить задачу</Button>
     </Form>
   );
 }
