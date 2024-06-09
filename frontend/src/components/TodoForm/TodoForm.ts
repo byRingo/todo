@@ -33,7 +33,7 @@ export const Input = styled.input`
     color: transparent;
   }
   &:focus {
-    outline: 1px solid #675ea9;
+    outline: none;
   }
 `;
 
