@@ -33,19 +33,21 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
     localStorage.setItem("todos", JSON.stringify(stores.todos.todos));
   };
 
-  const editTodo = (id: string, e: React.ChangeEvent) => {
-    dispatch(editTodoText({ id: id, text: e.target.innerHTML }));
+  const editTodo = (id: string, e: React.ChangeEvent<HTMLElement>) => {
+    console.log(e);
+    dispatch(editTodoText({ id: id, text: e.target.innerText }));
     localStorageUpdate();
   };
 
-  const toggleComplete = (id: string) => {
+  const toggleComplete = (id: string, e: React.FormEvent) => {
+    e.preventDefault();
     dispatch(toggleTodoComplete({ id }));
     localStorageUpdate();
   };
   return (
     <Item>
       <CompleteButton
-        onClick={() => toggleComplete(curTodo.id)}
+        onClick={(e) => toggleComplete(curTodo.id, e)}
         $isCompleted={curTodo.isCompleted}
       >
         {" "}
@@ -55,6 +57,7 @@ export default function TodoItem({ curTodo }: TodoItemProps) {
         $isCompleted={curTodo.isCompleted}
         key={curTodo.id}
         contentEditable={true}
+        suppressContentEditableWarning={true}
         onBlur={(e) => editTodo(curTodo.id, e)}
       >
         {curTodo.text}
