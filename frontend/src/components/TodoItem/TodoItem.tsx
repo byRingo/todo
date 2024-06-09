@@ -1,7 +1,14 @@
-import { TTodo } from "../../App.tsx";
+import { TTodo } from "../../pages/App/App.tsx";
 import { removeTodo, toggleTodoComplete } from "../../store/todoSlice.ts";
-import { useAppDispatch, useAppSelector } from "../../hook.ts";
-import { CompleteButton, Item, Li } from "./TodoItem.ts";
+import { useAppDispatch } from "../../hook.ts";
+import {
+  Checkmark,
+  CompleteButton,
+  DeleteButton,
+  Item,
+  Li,
+} from "./TodoItem.ts";
+import store from "../../store";
 
 interface TodoItemProps {
   curTodo: TTodo;
@@ -9,29 +16,34 @@ interface TodoItemProps {
 
 export default function TodoItem({ curTodo }: TodoItemProps) {
   const dispatch = useAppDispatch();
-  const todos = useAppSelector((state) => state.todos.todos);
 
   const deleteTodo = (id: string) => {
     dispatch(removeTodo({ id }));
-    console.log(todos);
+    const stores = store.getState();
+    localStorage.clear();
+    localStorage.setItem("todos", JSON.stringify(stores.todos.todos));
   };
 
-  // const setTodosLocalStorage = (todos: TTodo[]) => {
-  //   localStorage.setItem("todos", JSON.stringify(todos));
-  // };
   const toggleComplete = (id: string) => {
-    console.log(1);
     dispatch(toggleTodoComplete({ id }));
+    const stores = store.getState();
+    localStorage.clear();
+    localStorage.setItem("todos", JSON.stringify(stores.todos.todos));
   };
   return (
     <Item>
-      <CompleteButton onClick={() => toggleComplete(curTodo.id)}>
-        {(curTodo.completed && "✅") || "❌"}
+      <CompleteButton
+        onClick={() => toggleComplete(curTodo.id)}
+        $isCompleted={curTodo.isCompleted}
+      >
+        {" "}
+        <Checkmark>L</Checkmark>
       </CompleteButton>
-      <Li $isCompleted={curTodo.completed} key={curTodo.id}>
+
+      <Li $isCompleted={curTodo.isCompleted} key={curTodo.id}>
         {curTodo.text}
       </Li>
-      <button onClick={() => deleteTodo(curTodo.id)}>X</button>
+      <DeleteButton onClick={() => deleteTodo(curTodo.id)}>X</DeleteButton>
     </Item>
   );
 }
