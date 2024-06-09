@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Item = styled.form`
   display: flex;
+  justify-content: flex-start;
   gap: 1rem;
   background-color: #f5f2ff;
   padding: 1rem;
@@ -12,10 +13,16 @@ export const Li = styled.li<{ $isCompleted: boolean }>`
   list-style: none;
   font-size: 30px;
   text-decoration: ${(props) => (props.$isCompleted ? "line-through" : "none")};
-  width: 100%;
+  width: 60%;
   color: ${(props) => (props.$isCompleted ? "#C9C7ED" : "#675ea9")};
   &:focus {
-    border: 2px solid #f5f2ff;
+    outline: 1px solid #675ea9;
+  }
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
   }
 `;
 
@@ -26,7 +33,12 @@ export const CompleteButton = styled.button<{ $isCompleted: boolean }>`
   width: 25px;
   height: 25px;
   background-color: ${(props) => (props.$isCompleted ? "#7a89f3" : "white")};
-  margin-top: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+  @media (max-width: 400px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const Checkmark = styled.div`
@@ -41,8 +53,15 @@ export const DeleteButton = styled.button`
   color: #7a89f3;
   border: none;
   cursor: pointer;
+  margin-left: auto;
+  @media (max-width: 400px) {
+    width: 20px;
+  }
 `;
 
 export const DeleteImg = styled.img`
   width: 30px;
+  @media (max-width: 400px) {
+    width: 20px;
+  }
 `;

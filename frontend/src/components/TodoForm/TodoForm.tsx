@@ -36,6 +36,7 @@ export default function TodoForm({ text, setText }: TodoFormProps) {
         type="text"
         id="text-title"
         placeholder="Добавить задачу"
+        maxLength={30}
         onChange={(e) => setText(e.target.value)}
       />
     </Form>
