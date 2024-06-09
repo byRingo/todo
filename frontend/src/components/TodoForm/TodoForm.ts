@@ -10,8 +10,8 @@ export const Form = styled.form`
 
 export const Button = styled.button`
   padding: 0.5rem;
-  background-color: white;
-  border: 1px solid black;
+  background-color: #c9c7ed;
+  border: 1px solid #7a89f3;
   cursor: pointer;
   width: 25%;
 `;
@@ -19,6 +19,7 @@ export const Button = styled.button`
 export const Input = styled.input`
   padding: 0.5rem;
   width: 50%;
+  border: 1px solid #7a89f3;
 `;
 
 export const Label = styled.label`
