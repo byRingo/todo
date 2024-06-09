@@ -1,10 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-type TTodo = {
-  id: string;
-  text: string;
-  completed: boolean;
-};
+import { TTodo } from "../pages/App/App.tsx";
 
 type TodosState = {
   todos: TTodo[];
@@ -22,14 +17,17 @@ const todoSlice = createSlice({
       state.todos.push({
         id: new Date().toISOString(),
         text: action.payload.text,
-        completed: false,
+        isCompleted: false,
       });
     },
-    fillTodos(state, action: PayloadAction<{ id: string; text: string }>) {
+    fillTodos(
+      state,
+      action: PayloadAction<{ id: string; text: string; isCompleted: boolean }>,
+    ) {
       state.todos.push({
         id: action.payload.id,
         text: action.payload.text,
-        completed: false,
+        isCompleted: action.payload.isCompleted,
       });
     },
     removeTodo(state, action: PayloadAction<{ id: string }>) {
@@ -42,7 +40,7 @@ const todoSlice = createSlice({
         (todo) => todo.id === action.payload.id,
       );
       if (toggledTodo) {
-        toggledTodo.completed = !toggledTodo.completed;
+        toggledTodo.isCompleted = !toggledTodo.isCompleted;
       }
     },
   },

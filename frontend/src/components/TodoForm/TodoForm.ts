@@ -13,8 +13,14 @@ export const Button = styled.button`
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  width: 25%;
 `;
 
 export const Input = styled.input`
   padding: 0.5rem;
+  width: 50%;
+`;
+
+export const Label = styled.label`
+  width: 25%;
 `;

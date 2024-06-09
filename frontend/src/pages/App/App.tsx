@@ -1,23 +1,15 @@
 import { useEffect, useState } from "react";
-import TodoList from "./components/TodoList/TodoList.tsx";
-import TodoForm from "./components/TodoForm/TodoForm.tsx";
-import { useAppDispatch } from "./hook.ts";
-import { fillTodos } from "./store/todoSlice.ts";
-import styled from "styled-components";
+import TodoList from "../../components/TodoList/TodoList.tsx";
+import TodoForm from "../../components/TodoForm/TodoForm.tsx";
+import { useAppDispatch } from "../../hook.ts";
+import { fillTodos } from "../../store/todoSlice.ts";
+import { Body } from "./App.ts";
 
 export type TTodo = {
   id: string;
   text: string;
-  completed: boolean;
+  isCompleted: boolean;
 };
-
-const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-`;
 
 export default function App() {
   const [text, setText] = useState<string>("");
@@ -29,7 +21,13 @@ export default function App() {
     if (localStorageItem) {
       allTodos = JSON.parse(localStorageItem);
       allTodos.map((cur: TTodo) => {
-        dispatch(fillTodos({ id: cur.id, text: cur.text }));
+        dispatch(
+          fillTodos({
+            id: cur.id,
+            text: cur.text,
+            isCompleted: cur.isCompleted,
+          }),
+        );
       });
     }
   }, []);
