@@ -34,8 +34,9 @@ export default function App() {
 
   return (
     <Body>
-      <TodoList />
-      <TodoForm text={text} setText={setText} />
+      <TodoList>
+        <TodoForm text={text} setText={setText} />
+      </TodoList>
     </Body>
   );
 }

@@ -2,26 +2,41 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   display: flex;
-  gap: 3rem;
-  padding: 1rem;
-  border-bottom: 2px solid black;
+  padding: 0.5rem;
   align-items: center;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 80%;
+  margin-bottom: 2rem;
 `;
 
 export const Button = styled.button`
   padding: 0.5rem;
-  background-color: #c9c7ed;
-  border: 1px solid #7a89f3;
+  background-color: #d0c4d9;
+  border: none;
   cursor: pointer;
-  width: 25%;
+  margin-top: 0.3rem;
 `;
 
 export const Input = styled.input`
   padding: 0.5rem;
-  width: 50%;
-  border: 1px solid #7a89f3;
+  background-color: #d0c4d9;
+  border: none;
+  color: #675ea9;
+  font-size: 16px;
+  font-weight: 600;
+  width: 70%;
+  &::placeholder {
+    color: #675ea9;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+  &:focus {
+    outline: 1px solid #675ea9;
+  }
 `;
 
-export const Label = styled.label`
-  width: 25%;
+export const AddImg = styled.img`
+  width: 15px;
 `;
