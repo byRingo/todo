@@ -10,6 +10,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Provider store={store}>
       <App />
     </Provider>
-    <GlobalStyles></GlobalStyles>
+    <GlobalStyles />
   </React.StrictMode>,
 );
